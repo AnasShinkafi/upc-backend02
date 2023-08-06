@@ -22,6 +22,9 @@ import { Admin } from './register-admin/entities/register-admin.entity';
 import { DonationModule } from './donations/donations.module';
 import { NewsModule } from './news-latter/news-latter.module';
 import { MembershipEntity } from './membership/entities/membership.entity';
+import { WelcomeModule } from './welcome/welcome.module';
+import { SocialMediaModule } from './social-media/social-media.module';
+import { UpperNavModule } from './upper-nav/upper-nav.module';
 
 @Module({
   imports: [
@@ -51,7 +54,7 @@ import { MembershipEntity } from './membership/entities/membership.entity';
       }), 
       inject: [ConfigService],
     }),
-    MembershipModule, AuthModule, QuickContactModule, GalleryModule, RegisterAdminModule,PostBlogModule, NewsModule, BlogModule, DonationModule, EventModule, 
+    MembershipModule, AuthModule, QuickContactModule, GalleryModule, RegisterAdminModule,PostBlogModule, NewsModule, BlogModule, DonationModule, EventModule, WelcomeModule, SocialMediaModule, UpperNavModule, 
   ],
   controllers: [AppController],
   providers: [AppService],
