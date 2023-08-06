@@ -22,6 +22,8 @@ import { Admin } from './register-admin/entities/register-admin.entity';
 import { DonationModule } from './donations/donations.module';
 import { NewsModule } from './news-latter/news-latter.module';
 import { MembershipEntity } from './membership/entities/membership.entity';
+import { GoalModule } from './goal/goal.module';
+import { Goal } from './goal/entity/goal-entity';
 
 @Module({
   imports: [
@@ -45,15 +47,24 @@ import { MembershipEntity } from './membership/entities/membership.entity';
           News,
           // Catelog,
           Event,
+          Goal
         ],
         autoLoadEntities: true,
         synchronize: true,
       }), 
       inject: [ConfigService],
     }),
-    MembershipModule, AuthModule, QuickContactModule, GalleryModule, RegisterAdminModule,PostBlogModule, NewsModule, BlogModule, DonationModule, EventModule, 
+    MembershipModule, 
+    AuthModule, 
+    QuickContactModule, 
+    GalleryModule, 
+    RegisterAdminModule, 
+    PostBlogModule, 
+    NewsModule, 
+    BlogModule, 
+    DonationModule, 
+    EventModule, 
+    GoalModule, 
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
