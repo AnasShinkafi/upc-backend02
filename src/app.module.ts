@@ -23,6 +23,7 @@ import { DonationModule } from './donations/donations.module';
 import { NewsModule } from './news-latter/news-latter.module';
 import { MembershipEntity } from './membership/entities/membership.entity';
 import { VideoModule } from './video/video.module';
+import { Video } from './video/entities/video.entity';
 
 @Module({
   imports: [
@@ -46,6 +47,7 @@ import { VideoModule } from './video/video.module';
           News,
           // Catelog,
           Event,
+          Video,
         ],
         autoLoadEntities: true,
         synchronize: true,
