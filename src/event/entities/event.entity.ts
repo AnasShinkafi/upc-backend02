@@ -16,6 +16,12 @@ export class Event {
     @Column({ nullable: false})
     eventDescription: string;
 
+    @Column( {type: Date} )
+    eventDate: Date;
+
+    @Column()
+    location: string;
+
     @CreateDateColumn({ type: 'timestamp'})
     created_at: Date;
 

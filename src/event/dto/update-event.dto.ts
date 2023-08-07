@@ -1,6 +1,6 @@
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateEventDto } from './create-event.dto';
-import { IsString, IsDate, IsNotEmpty } from 'class-validator';
+import { IsString, IsDate, IsNotEmpty, IsPostalCode } from 'class-validator';
 
 export class UpdateEventDto extends PartialType(CreateEventDto) {
 
@@ -16,7 +16,11 @@ export class UpdateEventDto extends PartialType(CreateEventDto) {
     @IsNotEmpty()
     eventDescription: string;
 
-    // @IsDate()
-    // @IsNotEmpty()
-    // date: Date;
+    @IsDate()
+    @IsNotEmpty()
+    eventDate: Date;
+
+    @IsString()
+    @IsNotEmpty()
+    location: string;    
 }
