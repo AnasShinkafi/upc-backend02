@@ -21,7 +21,7 @@ export class EventService {
     return this.eventRepository.find();
   }
 
-  update( eventId: number, updateEventDto: UpdateEventDto){
+  update( eventId: number, updateEventDto: UpdateEventDto) {
       return this.eventRepository.update(eventId, updateEventDto)
   }
 
