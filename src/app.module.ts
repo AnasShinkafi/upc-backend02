@@ -22,6 +22,7 @@ import { Admin } from './register-admin/entities/register-admin.entity';
 import { DonationModule } from './donations/donations.module';
 import { NewsModule } from './news-latter/news-latter.module';
 import { MembershipEntity } from './membership/entities/membership.entity';
+import { VideoModule } from './video/video.module';
 
 @Module({
   imports: [
@@ -51,7 +52,7 @@ import { MembershipEntity } from './membership/entities/membership.entity';
       }), 
       inject: [ConfigService],
     }),
-    MembershipModule, AuthModule, QuickContactModule, GalleryModule, RegisterAdminModule,PostBlogModule, NewsModule, BlogModule, DonationModule, EventModule, 
+    MembershipModule, AuthModule, QuickContactModule, GalleryModule, RegisterAdminModule,PostBlogModule, NewsModule, BlogModule, DonationModule, EventModule, VideoModule, 
   ],
   controllers: [AppController],
   providers: [AppService],
