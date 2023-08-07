@@ -51,7 +51,7 @@ import { MembershipEntity } from './membership/entities/membership.entity';
       }), 
       inject: [ConfigService],
     }),
-    MembershipModule, AuthModule, QuickContactModule, GalleryModule, RegisterAdminModule,PostBlogModule, NewsModule, BlogModule, DonationModule, EventModule, 
+    
   ],
   controllers: [AppController],
   providers: [AppService],
