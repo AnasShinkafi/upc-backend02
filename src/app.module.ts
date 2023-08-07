@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { HeroModule } from './hero/hero.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ManifestoModule } from './manifesto/manifesto.module';
 
 @Module({
   imports: [
@@ -18,14 +18,12 @@ import { ManifestoModule } from './manifesto/manifesto.module';
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DATABASE'),
         entities: [
-        
         ],
         autoLoadEntities: true,
         synchronize: true,
       }), 
       inject: [ConfigService],
     }),
-    ManifestoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
