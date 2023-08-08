@@ -17,17 +17,13 @@ import { BlogModule } from './blog/blog.module';
         username: configService.get('POSTGRES_USER'),
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DATABASE'),
-        entities: [
-        
+
         ],
         autoLoadEntities: true,
         synchronize: true,
       }), 
       inject: [ConfigService],
     }),
-     BlogModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
