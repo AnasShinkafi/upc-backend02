@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { QuickContactModule } from './quick-contact/quick-contact.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -16,7 +17,8 @@ import { QuickContactModule } from './quick-contact/quick-contact.module';
         port: +configService.get<number>('POSTGRES_PORT'),
         username: configService.get('POSTGRES_USER'),
         password: configService.get('POSTGRES_PASSWORD'),
-        database: configService.get('POSTGRES_DATABASE'),
+        database: configService.get('POSTGRES_DATABASE'),,
+    AuthModule
 
         ],
         autoLoadEntities: true,
