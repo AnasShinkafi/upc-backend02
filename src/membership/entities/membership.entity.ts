@@ -1,7 +1,7 @@
 // membership.entity.ts
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn } from 'typeorm';
 import { Gender } from '../gender.enum';
-import { DonationEntity } from 'src/donations/entities/donation.entity';
+// import { DonationEntity } from 'src/donations/entities/donation.entity';
 
 @Entity()
 export class MembershipEntity {
@@ -53,7 +53,7 @@ export class MembershipEntity {
   @UpdateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP'})
   updated_at: Date;
 
-  @ManyToOne(() => DonationEntity, donationEntity => donationEntity.id, { onDelete: 'SET NULL'})
-  @JoinColumn()
-  user: DonationEntity;
+  // @ManyToOne(() => DonationEntity, donationEntity => donationEntity.id, { onDelete: 'SET NULL'})
+  // @JoinColumn()
+  // user: DonationEntity;
 }
