@@ -18,4 +18,3 @@ export class UpdateQuickContactDto extends PartialType(CreateQuickContactDto) {
     @IsNotEmpty()
     message: string
 }
-
