@@ -17,17 +17,13 @@ import { QuickContactModule } from './quick-contact/quick-contact.module';
         username: configService.get('POSTGRES_USER'),
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DATABASE'),
-        entities: [
-        
+
         ],
         autoLoadEntities: true,
         synchronize: true,
       }), 
       inject: [ConfigService],
     }),
-     QuickContactModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
