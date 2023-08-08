@@ -3,7 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { GalleriesModule } from './galleries/galleries.module';
 
 @Module({
   imports: [
@@ -17,18 +16,13 @@ import { GalleriesModule } from './galleries/galleries.module';
         username: configService.get('POSTGRES_USER'),
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DATABASE'),
-        entities: [
-        
+
         ],
         autoLoadEntities: true,
         synchronize: true,
       }), 
       inject: [ConfigService],
     }),
-    GalleriesModule,
-     
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
